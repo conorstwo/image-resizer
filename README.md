@@ -1,12 +1,12 @@
 # Image Resizer service
 
-This Spring Boot microservice allows you to resize an images on the fly by sending a simple REST request to /resizeImage.
+This Spring Boot microservice allows you to resize images on the fly by sending a simple POST request to /resizeImage.
 
-The supplied image must be in a byte array format and the request new height and width should be positive integers.
+The supplied image must be in byte array format and the request values new height and width must be positive integers.
 
 ## How to run the application
 
-To run the application first clone this repository then use maven to build the artifact using
+To run the application first clone this repository then use maven to build the artifact
 
 `mvn clean install`
 
@@ -30,4 +30,4 @@ Alternatively you can use ImageResizerApplicationTests to see an end to end demo
 
 Spring Boot initializr for setting up default spring boot project: https://start.spring.io/
 
-MyKong tutorials on converting images to byte arrays and resizing using Graphics2D: https://www.mkyong.com/java/how-to-convert-bufferedimage-to-byte-in-java/ and https://www.mkyong.com/java/how-to-resize-an-image-in-java/
+Mkyong tutorials on converting images to byte arrays and resizing using Graphics2D: https://www.mkyong.com/java/how-to-convert-bufferedimage-to-byte-in-java/ and https://www.mkyong.com/java/how-to-resize-an-image-in-java/
