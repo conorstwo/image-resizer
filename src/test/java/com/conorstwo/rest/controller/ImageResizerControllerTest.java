@@ -45,7 +45,6 @@ public class ImageResizerControllerTest {
         Mockito.when(mockResizeImageService.resizeImage(originalImage, newHeight, newWidth)).thenReturn(new byte[10]);
 
         this.mockMvc.perform(post("/resizeImage").content(requestBody).contentType(MediaType.APPLICATION_JSON))
-                .andDo(print())
                 .andExpect(status().is2xxSuccessful());
 
         Mockito.verify(mockResizeImageService, times(1)).resizeImage(originalImage, newHeight, newWidth);
@@ -64,7 +63,6 @@ public class ImageResizerControllerTest {
         Mockito.when(mockResizeImageService.resizeImage(originalImage, newHeight, newWidth)).thenReturn(new byte[10]);
 
         this.mockMvc.perform(post("/resizeImage").content(requestBody).contentType(MediaType.APPLICATION_JSON))
-                .andDo(print())
                 .andExpect(status().is4xxClientError());
 
         Mockito.verify(mockResizeImageService, times(0)).resizeImage(originalImage, newHeight, newWidth);
@@ -83,7 +81,6 @@ public class ImageResizerControllerTest {
         Mockito.when(mockResizeImageService.resizeImage(originalImage, newHeight, newWidth)).thenReturn(new byte[10]);
 
         this.mockMvc.perform(post("/resizeImage").content(requestBody).contentType(MediaType.APPLICATION_JSON))
-                .andDo(print())
                 .andExpect(status().is4xxClientError());
 
         Mockito.verify(mockResizeImageService, times(0)).resizeImage(originalImage, newHeight, newWidth);
@@ -102,7 +99,6 @@ public class ImageResizerControllerTest {
         Mockito.when(mockResizeImageService.resizeImage(originalImage, newHeight, newWidth)).thenReturn(new byte[10]);
 
         this.mockMvc.perform(post("/resizeImage").content(requestBody).contentType(MediaType.APPLICATION_JSON))
-                .andDo(print())
                 .andExpect(status().is4xxClientError());
 
         Mockito.verify(mockResizeImageService, times(0)).resizeImage(originalImage, newHeight, newWidth);
